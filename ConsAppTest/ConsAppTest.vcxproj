@@ -157,12 +157,14 @@
     <ClCompile Include="fann_example.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="opencv_video_car_counting.cpp" />
+    <ClCompile Include="opencv_webcam.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Blob.h" />
     <ClInclude Include="fann_example.h" />
     <ClInclude Include="main.h" />
     <ClInclude Include="opencv_video_car_counting.h" />
+    <ClInclude Include="opencv_webcam.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

@@ -6,7 +6,7 @@
 // How To Set Envoriment for OpenCV correctly
 // https://lithiumdenis.wordpress.com/2016/01/28/windows-установка-opencv-3-1-на-vs-2015/
 
-#include <opencv2\opencv.hpp>
+#include <opencv2/opencv.hpp>
 
 #include<opencv2/core/core.hpp>
 #include<opencv2/highgui/highgui.hpp>

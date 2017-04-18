@@ -252,11 +252,35 @@ bool cvExample_SearchCirclesOnCannyImg(cv::Mat imgOriginalCopy, cv::Mat &imgFina
 	cv::imshow("imgCanny", imgFinalResult); cv::waitKey(0);
 }
 
+std::string getUserIdAndDateTime(std::string _fileExtention)
+{
+	int nUserId = 1;
+
+	SYSTEMTIME systime;
+	char systemTime[128];
+	ZeroMemory(systemTime, sizeof(systemTime));
+	GetLocalTime(&systime);
+	wsprintfA(systemTime, "%d_%d_%d__%d_%d_%d"//_%d ",
+			, systime.wDay, systime.wMonth, systime.wYear
+			, systime.wHour, systime.wMinute, systime.wSecond //, systime.wMilliseconds
+			);
+
+	std::string result_str(systemTime);
+	result_str = "bank_client_" + std::to_string(nUserId) + "_" + result_str +"."+ _fileExtention;
+	return result_str;
+}
 
 #if 1
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 void main(void)
 {
+
+#if	EXAMPLE_WEBCAM
+	//getVideoStreamFromWebCam();
+	
+	takeOnePictureFromWebCam(getUserIdAndDateTime("jpg"));
+#endif
+
 #if	EXAMPLE_FANN
 	int res =  fannSimpleTrainExample();
 #endif

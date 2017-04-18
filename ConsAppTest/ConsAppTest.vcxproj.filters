@@ -27,6 +27,9 @@
     <ClCompile Include="opencv_video_car_counting.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="opencv_webcam.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Blob.h">
@@ -39,6 +42,9 @@
       <Filter>Source Files</Filter>
     </ClInclude>
     <ClInclude Include="opencv_video_car_counting.h">
+      <Filter>Source Files</Filter>
+    </ClInclude>
+    <ClInclude Include="opencv_webcam.h">
       <Filter>Source Files</Filter>
     </ClInclude>
   </ItemGroup>
